@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.66809a5e.chunk.css",
+    "main.css": "/static/css/main.9e99ddfb.chunk.css",
     "main.js": "/static/js/main.8fe98c70.chunk.js",
     "main.js.map": "/static/js/main.8fe98c70.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.49bc60d7.js",
@@ -28,7 +28,7 @@
     "static/js/11.270c8198.chunk.js.map": "/static/js/11.270c8198.chunk.js.map",
     "index.html": "/index.html",
     "static/css/2.4659568d.chunk.css.map": "/static/css/2.4659568d.chunk.css.map",
-    "static/css/main.66809a5e.chunk.css.map": "/static/css/main.66809a5e.chunk.css.map",
+    "static/css/main.9e99ddfb.chunk.css.map": "/static/css/main.9e99ddfb.chunk.css.map",
     "static/js/2.0b380432.chunk.js.LICENSE.txt": "/static/js/2.0b380432.chunk.js.LICENSE.txt",
     "static/media/ic_launcher-playstore.png": "/static/media/ic_launcher-playstore.3c226b65.png",
     "static/media/logoColor05.png": "/static/media/logoColor05.0f24a5e6.png",
@@ -40,7 +40,7 @@
     "static/js/runtime-main.49bc60d7.js",
     "static/css/2.4659568d.chunk.css",
     "static/js/2.0b380432.chunk.js",
-    "static/css/main.66809a5e.chunk.css",
+    "static/css/main.9e99ddfb.chunk.css",
     "static/js/main.8fe98c70.chunk.js"
   ]
 }
