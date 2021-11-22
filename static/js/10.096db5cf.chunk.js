@@ -1,2 +1,0 @@
-(this.webpackJsonpportafolio=this.webpackJsonpportafolio||[]).push([[10],{54:function(t,o,p){"use strict";p.r(o),o.default=p.p+"static/media/ic_launcher-playstore.304bbe0f.png"}}]);
-//# sourceMappingURL=10.096db5cf.chunk.js.map
