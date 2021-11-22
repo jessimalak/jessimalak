@@ -152,9 +152,9 @@ li {
           justify-content: space-evenly;
 }
 
-.horizontal-container.info {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+.horizontal-container.info div {
+  min-width: 375px;
+  width: 60%;
 }
 
 .horizontal-container.info p {

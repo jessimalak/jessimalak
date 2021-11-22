@@ -113,7 +113,11 @@ li {
     justify-content: space-evenly;
   }
   &.info {
-    flex-wrap: nowrap;
+    // flex-wrap: nowrap;
+    div{
+      min-width: 375px;
+      width:60%;
+    }
     p {
       margin-left: 1rem;
     }
