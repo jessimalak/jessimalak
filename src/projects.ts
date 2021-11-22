@@ -12,10 +12,10 @@ const projects = {
     platforms: ["android", "react", "pwa"],
     type: "personales",
     other: [
-      { name: "Lenguaje principal", value: "Typescript" },
-      { name: "Otros lenguajes", value: ["HTML5", "Sass", "Java"] },
+      { name: "Lenguaje principal 📑", value: "Typescript" },
+      { name: "Otros lenguajes 📄", value: ["HTML5", "Sass", "Java"] },
       {
-        name: "Paquetes/Librerias",
+        name: "Paquetes/Librerias 📚",
         value: [
           "React",
           "React Native",
@@ -52,10 +52,10 @@ const projects = {
     platforms: ["android", "electron"],
     type: "personales",
     other: [
-      { name: "Lenguaje Principal", value: "Typescript" },
-      { name: "Otros lenguajes", value: ["HTML5", "CSS3", "Java"] },
+      { name: "Lenguaje Principal 📑", value: "Typescript" },
+      { name: "Otros lenguajes 📄", value: ["HTML5", "CSS3", "Java"] },
       {
-        name: "Paquetes/Librerias",
+        name: "Paquetes/Librerias 📚",
         value: [
           "React Native",
           "Electron",
@@ -80,30 +80,30 @@ const projects = {
       },
     ],
   },
-  intiva: {
-    name: "Intiva",
-    logo: "intiva/logo_w.png",
-    icon: "intiva/ic_launcher-playstore.png",
-    desc: "lorem ipsum dolor sit amet, description larga pero no tanto, he he he, touch  me, touch me hard",
-    platforms: ["android", "apple-appstore", "apple", "microsoft"],
-    type: "laborales",
-    other: [
-      {
-        name: "Lenguajes",
-        value: ["Typescript", "Swift", "Objecitve-C", "Java", "C#"],
-      },
-      {
-        name: "Paquetes/Librerias",
-        value: [
-          "React Native",
-          "Lottie",
-          "Awesome-sharp",
-          "Crypto-es",
-          "React-native-PDF",
-        ],
-      },
-    ],
-  },
+  // intiva: {
+  //   name: "Intiva",
+  //   logo: "intiva/logo_w.png",
+  //   icon: "intiva/ic_launcher-playstore.png",
+  //   desc: "lorem ipsum dolor sit amet, description larga pero no tanto, he he he, touch  me, touch me hard",
+  //   platforms: ["android", "apple-appstore", "apple", "microsoft"],
+  //   type: "laborales",
+  //   other: [
+  //     {
+  //       name: "Lenguajes",
+  //       value: ["Typescript", "Swift", "Objecitve-C", "Java", "C#"],
+  //     },
+  //     {
+  //       name: "Paquetes/Librerias",
+  //       value: [
+  //         "React Native",
+  //         "Lottie",
+  //         "Awesome-sharp",
+  //         "Crypto-es",
+  //         "React-native-PDF",
+  //       ],
+  //     },
+  //   ],
+  // },
   neeo: {
     name: "NEEO",
     logo: "neeo/logo.png",
@@ -113,8 +113,8 @@ const projects = {
     platforms: ["android", "microsoft"],
     type: "personales",
     other: [
-      { name: "Lenguajes", value: ["Java", "C#"] },
-      { name: "Paquetes/Librerías", value: ["Firebase", "Google maps API"] },
+      { name: "Lenguajes 📑", value: ["Java", "C#"] },
+      { name: "Paquetes/Librerías 📚", value: ["Firebase", "Google maps API"] },
     ],
     images: [
       { label: "Inicio Android", img: "neeo/screenshot1.png" },
