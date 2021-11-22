@@ -16,8 +16,7 @@ function Layout() {
           <Nav>
             <Nav.Item>
               <NavLink to="/">
-                <Icon name="home-outline" />
-                Inicio
+                <Icon name="home-outline" /> Inicio
               </NavLink>
             </Nav.Item>
             <Nav.Item>
