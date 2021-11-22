@@ -2,6 +2,7 @@ $primary-color: #93278f;
 $accent-color: #1b1464;
 $background-color: #212121;
 $links-color: #4834b4;
+$card-color: #333333;
 body {
   background-color: #212121 !important;
 }
@@ -27,22 +28,25 @@ li {
 
 .navbar {
   background: linear-gradient(90deg, $primary-color, $accent-color);
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
   > .container-fluid {
     justify-content: center !important;
     .nav-item > a {
       text-decoration: none;
       color: #fff;
       margin: 0 0.5rem;
+      font-size: 24px;
       &.active {
         border-bottom: 1px #fff solid;
-        padding: 0.5rem 1rem;
+        padding:  1rem;
       }
     }
   }
 }
 
 .screen {
-  height: calc(100% - 40px);
+  height: calc(100% - 68px);
   padding: 0.5rem 2rem;
   h2 {
     text-transform: capitalize;
@@ -66,6 +70,7 @@ li {
 .social-icons {
   font-size: 2.5rem;
   a {
+    transition: color 250ms ease;
     color: #fff;
     padding: 0.5rem;
     &:hover {
@@ -81,8 +86,12 @@ li {
 }
 
 .card {
-  background-color: $background-color !important;
+  background-color: $card-color !important;
   border-radius: 1rem !important;
+  transition: transform 250ms ease;
+  &:hover{
+    transform: scale(1.1);
+  }
   // border: 1px #d9d9d9 solid;
   h2 {
     text-align: center;

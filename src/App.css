@@ -27,6 +27,8 @@ li {
 .navbar {
   background: -webkit-gradient(linear, left top, right top, from(#93278f), to(#1b1464));
   background: linear-gradient(90deg, #93278f, #1b1464);
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
 }
 
 .navbar > .container-fluid {
@@ -39,15 +41,16 @@ li {
   text-decoration: none;
   color: #fff;
   margin: 0 0.5rem;
+  font-size: 24px;
 }
 
 .navbar > .container-fluid .nav-item > a.active {
   border-bottom: 1px #fff solid;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
 }
 
 .screen {
-  height: calc(100% - 40px);
+  height: calc(100% - 68px);
   padding: 0.5rem 2rem;
   overflow-x: hidden;
 }
@@ -84,6 +87,8 @@ li {
 }
 
 .social-icons a {
+  -webkit-transition: color 250ms ease;
+  transition: color 250ms ease;
   color: #fff;
   padding: 0.5rem;
 }
@@ -101,8 +106,17 @@ li {
 }
 
 .card {
-  background-color: #212121 !important;
+  background-color: #333333 !important;
   border-radius: 1rem !important;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: -webkit-transform 250ms ease;
+  transition: transform 250ms ease;
+  transition: transform 250ms ease, -webkit-transform 250ms ease;
+}
+
+.card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 .card h2 {
