@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router";
 import projects from "../projects";
 import { project } from "../types";
 import Icon from "../components/Icon";
+import { Carousel } from "react-bootstrap";
 
 export default function ProjectScreen() {
   const { name } = useParams();
@@ -27,7 +28,51 @@ export default function ProjectScreen() {
           ))}
         </div>
       </div>
-      <img src={data?.logo} alt="icono" className='app-icon' />
+      <div className="horizontal-container info">
+        <img src={data?.logo} alt="icono" className="app-icon" />
+        <div>
+          <p>{data?.desc}</p>
+          <div className="links-container">
+            {data?.links?.map((link) => (
+              <a href={link.url} target="_blank">
+                <Icon name={"logo-" + link.icon} />
+                {link.name}
+              </a>
+            ))}
+          </div>
+        </div>
+      </div>
+      <Carousel>
+        {data?.images?.map((item, index) => (
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={require("../assets/" + item.img).default}
+              alt={"screenshot" + index.toString()}
+            />
+            <Carousel.Caption>
+              <p>{item.label}</p>
+            </Carousel.Caption>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+      <div className="horizontal-container evenly">
+        {data?.other &&
+          data.other.map((item) => (
+            <div>
+              <h3>{item.name}</h3>
+              {typeof item.value == "string" ? (
+                <p>{item.value}</p>
+              ) : (
+                <ul>
+                  {item.value.map((val) => (
+                    <li>{val}</li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          ))}
+      </div>
     </section>
   );
 }

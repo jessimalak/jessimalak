@@ -14,13 +14,19 @@ body {
   width: 100vw;
 }
 
-p, h1, h2, span, ion-icon {
+p,
+h1,
+h2,
+span,
+h3,
+li {
   color: #fff;
+  white-space: pre-line;
 }
 
 .navbar {
-  background: -webkit-gradient(linear, left top, right top, from(#93278F), to(#1B1464));
-  background: linear-gradient(90deg, #93278F, #1B1464);
+  background: -webkit-gradient(linear, left top, right top, from(#93278f), to(#1b1464));
+  background: linear-gradient(90deg, #93278f, #1b1464);
 }
 
 .navbar > .container-fluid {
@@ -83,7 +89,7 @@ p, h1, h2, span, ion-icon {
 }
 
 .social-icons a:hover {
-  color: #93278F;
+  color: #93278f;
 }
 
 .grid {
@@ -126,14 +132,55 @@ p, h1, h2, span, ion-icon {
           justify-content: space-between;
 }
 
+.horizontal-container.evenly {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.horizontal-container.info {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.horizontal-container.info p {
+  margin-left: 1rem;
+}
+
 .icon-container ion-icon {
   font-size: 2rem;
   padding: 0.5rem;
+  color: white;
 }
 
 .app-icon {
   border-radius: 2rem;
   height: 250px;
   width: 250px;
+}
+
+.links-container a {
+  padding: 0.5rem 1rem;
+  color: #4834b4;
+  font-size: 1.5rem;
+}
+
+.links-container a:hover {
+  color: #93278f;
+}
+
+.carousel-indicators button {
+  background-color: #93278f !important;
+}
+
+.carousel-item img {
+  height: 450px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.carousel-item p {
+  color: #93278f;
+  font-weight: bold;
 }
 /*# sourceMappingURL=App.css.map */
