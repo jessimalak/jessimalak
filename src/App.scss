@@ -32,6 +32,9 @@ li {
   padding-bottom: 1rem !important;
   > .container-fluid {
     justify-content: center !important;
+    .nav-items{
+        animation: navAppear ease 1s;
+    }
     .nav-item > a {
       text-decoration: none;
       color: #fff;
@@ -158,4 +161,11 @@ li {
     color: $primary-color;
     font-weight: bold;
   }
+}
+
+@keyframes navAppear{
+    0%{transform: translateX(-100%)}
+    50%{transform: translateX(35%)}
+    75%{transform: translateX(-20%)}
+    100%{transform: translateX(0)}
 }

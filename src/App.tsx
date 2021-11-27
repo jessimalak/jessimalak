@@ -13,7 +13,7 @@ function Layout() {
     <>
       <Navbar>
         <Container fluid>
-          <Nav>
+          <Nav className='nav-items'>
             <Nav.Item>
               <NavLink to="/">
                 <Icon name="home-outline" /> Inicio

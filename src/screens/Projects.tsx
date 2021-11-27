@@ -22,13 +22,14 @@ export default function ProjectsScreen() {
         <>
           <h2>{t}</h2>
           <div className="grid">
-            {projects[t].map((p) => (
+            {projects[t].map((p, i) => (
               <Card
-                key={p.id}
-                name={p.name}
-                logo={p.logo}
-                platforms={p.platforms}
-                id={p.id}
+                    key={p.id}
+                    name={p.name}
+                    logo={p.logo}
+                    platforms={p.platforms}
+                    id={p.id}
+                    index={i}
               />
             ))}
           </div>

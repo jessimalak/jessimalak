@@ -5,8 +5,7 @@ body {
 * {
   padding: 0;
   margin: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 #root {
@@ -25,25 +24,22 @@ li {
 }
 
 .navbar {
-  background: -webkit-gradient(linear, left top, right top, from(#93278f), to(#1b1464));
   background: linear-gradient(90deg, #93278f, #1b1464);
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
 }
-
 .navbar > .container-fluid {
-  -webkit-box-pack: center !important;
-      -ms-flex-pack: center !important;
-          justify-content: center !important;
+  justify-content: center !important;
 }
-
+.navbar > .container-fluid .nav-items {
+  animation: navAppear ease 1s;
+}
 .navbar > .container-fluid .nav-item > a {
   text-decoration: none;
   color: #fff;
   margin: 0 0.5rem;
   font-size: 24px;
 }
-
 .navbar > .container-fluid .nav-item > a.active {
   border-bottom: 1px #fff solid;
   padding: 1rem;
@@ -54,30 +50,19 @@ li {
   padding: 0.5rem 2rem;
   overflow-x: hidden;
 }
-
 .screen h2 {
   text-transform: capitalize;
 }
 
 .center-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
-
 .center-content img {
   width: 100%;
 }
@@ -85,78 +70,52 @@ li {
 .social-icons {
   font-size: 2.5rem;
 }
-
 .social-icons a {
-  -webkit-transition: color 250ms ease;
   transition: color 250ms ease;
   color: #fff;
   padding: 0.5rem;
 }
-
 .social-icons a:hover {
   color: #93278f;
 }
 
 .grid {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1rem;
 }
 
 .card {
   background-color: #333333 !important;
   border-radius: 1rem !important;
-  -webkit-transition: -webkit-transform 250ms ease;
-  transition: -webkit-transform 250ms ease;
   transition: transform 250ms ease;
-  transition: transform 250ms ease, -webkit-transform 250ms ease;
 }
-
 .card:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+  transform: scale(1.1);
 }
-
 .card h2 {
   text-align: center;
 }
-
 .card img {
   max-height: 250px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .horizontal-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-
 .horizontal-container.between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
-
 .horizontal-container.evenly {
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  justify-content: space-evenly;
 }
-
 .horizontal-container.info div {
   min-width: 375px;
   width: 60%;
 }
-
 .horizontal-container.info p {
   margin-left: 1rem;
 }
@@ -178,7 +137,6 @@ li {
   color: #4834b4;
   font-size: 1.5rem;
 }
-
 .links-container a:hover {
   color: #93278f;
 }
@@ -189,12 +147,26 @@ li {
 
 .carousel-item img {
   height: 450px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
-
 .carousel-item p {
   color: #93278f;
   font-weight: bold;
 }
+
+@keyframes navAppear {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(35%);
+  }
+  75% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 /*# sourceMappingURL=App.css.map */
