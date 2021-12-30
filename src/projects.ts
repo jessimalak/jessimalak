@@ -33,7 +33,12 @@ const projects = {
         name: "Play Store",
         url: "https://play.google.com/store/apps/details?id=com.insitu.jc2",
       },
-      { icon: "pwa", name: "Web", url: "https://insituweb.com" },
+      { icon: "html5", name: "Web", url: "https://insituapp.com.co" },
+      {
+        icon: "pwa",
+        name: "Web creadores",
+        url: "https://creadoresinsitu.web.app",
+      },
     ],
     images: [
       { label: "", img: "inSitu/screen_1.png" },
