@@ -5,7 +5,8 @@ body {
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 #root {
@@ -24,22 +25,30 @@ li {
 }
 
 .navbar {
+  background: -webkit-gradient(linear, left top, right top, from(#93278f), to(#1b1464));
   background: linear-gradient(90deg, #93278f, #1b1464);
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
 }
+
 .navbar > .container-fluid {
-  justify-content: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
 }
+
 .navbar > .container-fluid .nav-items {
-  animation: navAppear ease 1s;
+  -webkit-animation: navAppear ease 1s;
+          animation: navAppear ease 1s;
 }
+
 .navbar > .container-fluid .nav-item > a {
   text-decoration: none;
   color: #fff;
   margin: 0 0.5rem;
   font-size: 24px;
 }
+
 .navbar > .container-fluid .nav-item > a.active {
   border-bottom: 1px #fff solid;
   padding: 1rem;
@@ -50,19 +59,30 @@ li {
   padding: 0.5rem 2rem;
   overflow-x: hidden;
 }
+
 .screen h2 {
   text-transform: capitalize;
 }
 
 .center-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 800px;
   margin: auto;
   text-align: center;
 }
+
 .center-content img {
   width: 100%;
 }
@@ -70,52 +90,78 @@ li {
 .social-icons {
   font-size: 2.5rem;
 }
+
 .social-icons a {
+  -webkit-transition: color 250ms ease;
   transition: color 250ms ease;
   color: #fff;
   padding: 0.5rem;
 }
+
 .social-icons a:hover {
   color: #93278f;
 }
 
 .grid {
+  display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1rem;
 }
 
 .card {
   background-color: #333333 !important;
   border-radius: 1rem !important;
+  -webkit-transition: -webkit-transform 250ms ease;
+  transition: -webkit-transform 250ms ease;
   transition: transform 250ms ease;
+  transition: transform 250ms ease, -webkit-transform 250ms ease;
 }
+
 .card:hover {
-  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
+
 .card h2 {
   text-align: center;
 }
+
 .card img {
   max-height: 250px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .horizontal-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
+
 .horizontal-container.between {
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
+
 .horizontal-container.evenly {
-  justify-content: space-evenly;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
+
 .horizontal-container.info div {
   min-width: 375px;
   width: 60%;
 }
+
 .horizontal-container.info p {
   margin-left: 1rem;
 }
@@ -137,6 +183,7 @@ li {
   color: #4834b4;
   font-size: 1.5rem;
 }
+
 .links-container a:hover {
   color: #93278f;
 }
@@ -147,26 +194,117 @@ li {
 
 .carousel-item img {
   height: 450px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
+
 .carousel-item p {
   color: #93278f;
   font-weight: bold;
 }
 
-@keyframes navAppear {
+.image-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 2;
+}
+
+.image-modal > img {
+  display: none;
+  max-height: 90%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  max-width: 80%;
+}
+
+.image-modal > img.visible {
+  display: inline-block;
+}
+
+.info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.info-container > .horizontal-container {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.info-container .carousel {
+  max-width: 45%;
+}
+
+@-webkit-keyframes navAppear {
   0% {
-    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
   }
   50% {
-    transform: translateX(35%);
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
   }
   75% {
-    transform: translateX(-20%);
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
   }
   100% {
-    transform: translateX(0);
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
   }
 }
 
+@keyframes navAppear {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  50% {
+    -webkit-transform: translateX(35%);
+            transform: translateX(35%);
+  }
+  75% {
+    -webkit-transform: translateX(-20%);
+            transform: translateX(-20%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .info-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .info-container > .carousel {
+    max-width: -webkit-max-content;
+    max-width: -moz-max-content;
+    max-width: max-content;
+  }
+}
 /*# sourceMappingURL=App.css.map */

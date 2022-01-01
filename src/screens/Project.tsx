@@ -4,11 +4,13 @@ import projects from "../projects";
 import { project } from "../types";
 import Icon from "../components/Icon";
 import { Carousel } from "react-bootstrap";
+import { AnimatePresence, AnimateSharedLayout, motion } from "framer-motion";
 
 export default function ProjectScreen() {
   const { name } = useParams();
   const navigate = useNavigate();
   const [data, setData] = useState<project>();
+  const [modal, setModal] = useState({ visible: false, index: 0 });
   useEffect(() => {
     const info = projects[name || ""];
     console.log(info);
@@ -19,6 +21,7 @@ export default function ProjectScreen() {
     } else navigate("/");
   }, []);
   return (
+    <AnimateSharedLayout>
     <section className="screen">
       <div className="horizontal-container between">
         <h1>{data?.name}</h1>
@@ -42,37 +45,55 @@ export default function ProjectScreen() {
           </div>
         </div>
       </div>
-      <Carousel>
-        {data?.images?.map((item, index) => (
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={require("../assets/" + item.img).default}
-              alt={"screenshot" + index.toString()}
-            />
-            <Carousel.Caption>
-              <p>{item.label}</p>
-            </Carousel.Caption>
-          </Carousel.Item>
-        ))}
-      </Carousel>
-      <div className="horizontal-container evenly">
-        {data?.other &&
-          data.other.map((item) => (
-            <div>
-              <h3>{item.name}</h3>
-              {typeof item.value == "string" ? (
-                <p>{item.value}</p>
-              ) : (
-                <ul>
-                  {item.value.map((val) => (
-                    <li>{val}</li>
-                  ))}
-                </ul>
-              )}
-            </div>
-          ))}
+      <div className="info-container">
+        {data?.images?.length && (
+          <Carousel interval={!modal.visible ? 5000 : null}>
+            {data.images.map((item, index) => (
+              <Carousel.Item>
+                <motion.img onClick={()=>setModal({visible:true, index})}
+                layoutId={index.toString()}
+                  className="d-block w-100"
+                  src={require("../assets/" + item.img).default}
+                  alt={"screenshot" + index.toString()}
+                />
+                <Carousel.Caption>
+                  <p>{item.label}</p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            ))}
+          </Carousel>
+        )}
+        <div className="horizontal-container evenly">
+          {data?.other &&
+            data.other.map((item) => (
+              <div>
+                <h3>{item.name}</h3>
+                {typeof item.value == "string" ? (
+                  <p>{item.value}</p>
+                ) : (
+                  <ul>
+                    {item.value.map((val) => (
+                      <li>{val}</li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+            ))}
+        </div>
       </div>
-    </section>
+      <AnimatePresence>
+        {modal.visible && (
+          <motion.div className="image-modal" onClick={()=>setModal({...modal, visible: false})}>
+            {data?.images?.map((item, index) => (
+              <motion.img layoutId={index.toString()}
+                className={index == modal.index ? 'visible' : ''}
+                src={require("../assets/" + item.img).default}
+                alt={"screenshot" + index.toString()}
+              />
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </section></AnimateSharedLayout>
   );
 }

@@ -32,8 +32,8 @@ li {
   padding-bottom: 1rem !important;
   > .container-fluid {
     justify-content: center !important;
-    .nav-items{
-        animation: navAppear ease 1s;
+    .nav-items {
+      animation: navAppear ease 1s;
     }
     .nav-item > a {
       text-decoration: none;
@@ -42,7 +42,7 @@ li {
       font-size: 24px;
       &.active {
         border-bottom: 1px #fff solid;
-        padding:  1rem;
+        padding: 1rem;
       }
     }
   }
@@ -92,7 +92,7 @@ li {
   background-color: $card-color !important;
   border-radius: 1rem !important;
   transition: transform 250ms ease;
-  &:hover{
+  &:hover {
     transform: scale(1.1);
   }
   // border: 1px #d9d9d9 solid;
@@ -117,9 +117,9 @@ li {
   }
   &.info {
     // flex-wrap: nowrap;
-    div{
+    div {
       min-width: 375px;
-      width:60%;
+      width: 60%;
     }
     p {
       margin-left: 1rem;
@@ -148,7 +148,7 @@ li {
   }
 }
 
-.carousel-indicators button{
+.carousel-indicators button {
   background-color: $primary-color !important;
 }
 
@@ -157,15 +157,65 @@ li {
     height: 450px;
     object-fit: contain;
   }
-  p{
+  p {
     color: $primary-color;
     font-weight: bold;
   }
 }
 
-@keyframes navAppear{
-    0%{transform: translateX(-100%)}
-    50%{transform: translateX(35%)}
-    75%{transform: translateX(-20%)}
-    100%{transform: translateX(0)}
+.image-modal {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  z-index: 2;
+  > img {
+    display: none;
+    max-height: 90%;
+    object-fit: contain;
+    max-width: 80%;
+    &.visible {
+      display: inline-block;
+    }
+  }
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 10px;
+  >.horizontal-container{
+    flex: 1;
+  }
+  .carousel{
+    max-width: 45%;
+  }
+}
+@keyframes navAppear {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(35%);
+  }
+  75% {
+    transform: translateX(-20%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .info-container{
+    justify-content: center;
+    >.carousel{
+    max-width: max-content;
+  }}
 }
