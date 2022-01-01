@@ -24,6 +24,8 @@ const projects = {
           "Google maps API",
           "Google Geocode",
           "Semantic-UI",
+          "Lottie",
+          "React Navigation"
         ],
       },
     ],
@@ -131,6 +133,25 @@ const projects = {
       { label: "Guías windows", img: "neeo/screenshot7.png" },
     ],
   },
+  geet:{
+    name: 'Geet',
+    logo: 'geet/logo.png',
+    icon: 'geet/icon.png',
+    desc:'Diseño conceptual de app de citas basado en Material Design 2 y Fluent Design hecho en Figma',
+    platforms: ['figma','android', 'apple-appstore'],
+    type:'personales',
+    other:[
+      {name: 'Iconos 🖼️', value: ['Icons8', 'Microsoft/FluentUI']}
+    ],
+    images: [
+      { label: "Pantalla principal", img: "geet/screenshot1.png" },
+      { label: "Chats y matches", img: "geet/screenshot2.png" },
+      { label: "Likes recibidos", img: "geet/screenshot3.png" },
+      { label: "Ajustes", img: "geet/screenshot4.png" },
+      { label: "Ajustes avanzados", img: "geet/screenshot5.png" },
+      
+    ]
+  }
 };
 
 export default projects;
