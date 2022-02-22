@@ -25,7 +25,7 @@ const projects = {
           "Google Geocode",
           "Semantic-UI",
           "Lottie",
-          "React Navigation"
+          "React Navigation",
         ],
       },
     ],
@@ -133,25 +133,48 @@ const projects = {
       { label: "Guías windows", img: "neeo/screenshot7.png" },
     ],
   },
-  geet:{
-    name: 'Geet',
-    logo: 'geet/logo.png',
-    icon: 'geet/icon.png',
-    desc:'Diseño conceptual de app de citas basado en Material Design 2 y Fluent Design hecho en Figma',
-    platforms: ['figma','android', 'apple-appstore'],
-    type:'personales',
-    other:[
-      {name: 'Iconos 🖼️', value: ['Icons8', 'Microsoft/FluentUI']}
-    ],
+  geet: {
+    name: "Geet",
+    logo: "geet/logo.png",
+    icon: "geet/icon.png",
+    desc: "Diseño conceptual de app de citas basado en Material Design 2 y Fluent Design hecho en Figma",
+    platforms: ["figma", "android", "apple-appstore"],
+    type: "personales",
+    other: [{ name: "Iconos 🖼️", value: ["Icons8", "Microsoft/FluentUI"] }],
     images: [
       { label: "Pantalla principal", img: "geet/screenshot1.png" },
       { label: "Chats y matches", img: "geet/screenshot2.png" },
       { label: "Likes recibidos", img: "geet/screenshot3.png" },
       { label: "Ajustes", img: "geet/screenshot4.png" },
       { label: "Ajustes avanzados", img: "geet/screenshot5.png" },
-      
-    ]
-  }
+    ],
+  },
+  seks: {
+    name: "Seks",
+    logo: "seks/logo.png",
+    icon: "seks/ic_launcher-playstore.png",
+    desc: 'App para dispositivos móviles hechan en flutter, guarda la información de manera local y si el usuarios inicia sesión (Firebase Auth) los datos se sincronizan en la nube (Firebase firestore).\n "Guarda y gestiona esos encuentros candentes para llevar un controlo de que haces y con quien, solo para el recuerdo y por si acaso."',
+    platforms: ["android"],
+    type: "personales",
+    other: [
+      {
+        name: "Frameworks / librerías 📚",
+        value: [
+          "Flutter 2.8",
+          "Provider",
+          "Firebase",
+          "Table calendar",
+          "Shared preferences",
+        ],
+      },
+      { name: "Iconos 🖼️", value: "Microsoft/FluentUI" },
+    ],
+    images: [
+      { label: "", img: "seks/screenshot1.png" },
+      { label: "", img: "seks/screenshot2.png" },
+      { label: "", img: "seks/screenshot3.png" },
+    ],
+  },
 };
 
 export default projects;
